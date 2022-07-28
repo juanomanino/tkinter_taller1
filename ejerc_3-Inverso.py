@@ -18,7 +18,7 @@ def sumar ():
 
     z=a2+b2+c2+c1
 
-    t_resultado.insert(INSERT, "Resultados:\n El número "+str(x)+" a la inversa es "+str(z)+"\n")
+    t_resultado.insert(INSERT, "Resultados:\n El número "+x.get()+" a la inversa es "+str(z)+"\n")
 
 def borrar():
     messagebox.showinfo("Suma 1.0", "Los datos serán borrados...")
@@ -34,21 +34,15 @@ def salir():
 # Ventana Principal
 #---------------------
 
-#Se declara una varaiable que llamamos ventana_principal y que adquiere las caracteristicas de un objeto Tk
 ventana_principal=Tk()
 
-#Titulo de la ventana
 ventana_principal.title("Juano Niño")
 
-#Establecer tamaño a la pantalla
 ventana_principal.geometry("800x500")
 
-#Icono de la ventana principal
 
-#Deshabilitar boton de maximizar
 ventana_principal.resizable(0,0)
 
-#Color de fondo de la ventana principal
 ventana_principal.config(bg="snow")
 
 #---------------------

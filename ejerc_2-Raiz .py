@@ -7,7 +7,7 @@ from tkinter import messagebox
 
 def sumar ():
     z=pow(int(n.get()),1/int(x.get()))
-    t_resultado.insert(INSERT, "Resultados:\n La raiz es "+str(z)+"\n")
+    t_resultado.insert(INSERT, "Resultados:\n La raiz del número "+n.get()+" es "+str(z)+"\n")
 
 def borrar():
     messagebox.showinfo("Suma 1.0", "Los datos serán borrados...")

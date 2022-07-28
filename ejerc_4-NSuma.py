@@ -6,9 +6,8 @@ from tkinter import messagebox
 #---------------------
 
 def sumar ():
-    i=int(x.get())*0.19
-    z=int(x.get())+i
-    t_resultado.insert(INSERT, "Resultados:\n El valor del Iva(0.19) de este producto es "+str(i)+"$.\n El valor total del producto es "+str(z)+"\n")
+    z=int(x.get())*(int(x.get())+1)/2
+    t_resultado.insert(INSERT, "Resultados:\n La suma de los primeros "+x.get()+" enteros positivos es : "+str(z)+"\n")
 
 def borrar():
     messagebox.showinfo("Suma 1.0", "Los datos serán borrados...")
@@ -45,7 +44,6 @@ ventana_principal.config(bg="snow")
 # Variables Globales
 #---------------------  
 x=StringVar()
-i=DoubleVar()
 z=IntVar()
 
 #---------------------
@@ -60,7 +58,7 @@ titulo= Label(frame_entrada, text="Iva y Precio Final")
 titulo.config(bg="ivory2", fg="maroon", font=("Times New Roman", 20))
 titulo.place(x=240,y=10)
 
-subtitulo2= Label(frame_entrada, text="Dado el valor de venta de un producto,\n Calcular su IVA y el precio final de venta")
+subtitulo2= Label(frame_entrada, text="Determinar la suma de los primeros \n N enteros positivos usando la fórmula.")
 subtitulo2.config(bg="ivory2", fg="maroon", font=("Times New Roman", 15), anchor=CENTER)
 subtitulo2.place(x=240,y=70)
 
@@ -69,7 +67,7 @@ etiq_logo=Label(frame_entrada, image=logo)
 etiq_logo.config(bg="ivory2")
 etiq_logo.place(x=10,y=10)
 
-etiq_a=Label(frame_entrada, text="Precio del Producto = ")
+etiq_a=Label(frame_entrada, text="Número N = ")
 etiq_a.config(bg="ivory2", fg="blue", font=("Arial", 15), anchor=CENTER)
 etiq_a.place(x=280, y=145)
 

@@ -1,18 +1,19 @@
 from tkinter import *
 from tkinter import messagebox
+import math
 
 #---------------------
 # Funciones de la App
 #---------------------
 
 def sumar ():
-    i=int(x.get())*0.19
-    z=int(x.get())+i
-    t_resultado.insert(INSERT, "Resultados:\n El valor del Iva(0.19) de este producto es "+str(i)+"$.\n El valor total del producto es "+str(z)+"\n")
+    area=math.pi*int(rad.get())*int(rad.get())
+    per=2*int(rad.get())*math.pi
+    t_resultado.insert(INSERT, "Resultados:\n El valor del Radio es: "+rad.get()+"\n El valor del Área es: "+str(area)+"\n El valor del perímetro es "+str(per)+"\n")
 
 def borrar():
     messagebox.showinfo("Suma 1.0", "Los datos serán borrados...")
-    x.set("")
+    rad.set("")
     t_resultado.delete("1.0", "end")
 
 def salir():
@@ -44,9 +45,9 @@ ventana_principal.config(bg="snow")
 #---------------------
 # Variables Globales
 #---------------------  
-x=StringVar()
-i=DoubleVar()
-z=IntVar()
+rad=StringVar()
+area=DoubleVar()
+per=DoubleVar()
 
 #---------------------
 # Frame Entrada
@@ -56,11 +57,11 @@ frame_entrada=Frame(ventana_principal)
 frame_entrada.config(bg="ivory2", width=780, height=240)
 frame_entrada.place(x=10,y=10)
 
-titulo= Label(frame_entrada, text="Iva y Precio Final")
+titulo= Label(frame_entrada, text="Área y Perímetro del Círculo")
 titulo.config(bg="ivory2", fg="maroon", font=("Times New Roman", 20))
 titulo.place(x=240,y=10)
 
-subtitulo2= Label(frame_entrada, text="Dado el valor de venta de un producto,\n Calcular su IVA y el precio final de venta")
+subtitulo2= Label(frame_entrada, text="Calcular el área y el perímetro de un círculo dado su radio,\n")
 subtitulo2.config(bg="ivory2", fg="maroon", font=("Times New Roman", 15), anchor=CENTER)
 subtitulo2.place(x=240,y=70)
 
@@ -69,11 +70,11 @@ etiq_logo=Label(frame_entrada, image=logo)
 etiq_logo.config(bg="ivory2")
 etiq_logo.place(x=10,y=10)
 
-etiq_a=Label(frame_entrada, text="Precio del Producto = ")
+etiq_a=Label(frame_entrada, text="Valor del Radio = ")
 etiq_a.config(bg="ivory2", fg="blue", font=("Arial", 15), anchor=CENTER)
 etiq_a.place(x=280, y=145)
 
-entry_a=Entry(frame_entrada, width=7, textvariable=x)
+entry_a=Entry(frame_entrada, width=7, textvariable=rad)
 entry_a.config(font=("Arial", 20), justify=CENTER)
 entry_a.focus_set()
 entry_a.place(x=480,y=140)

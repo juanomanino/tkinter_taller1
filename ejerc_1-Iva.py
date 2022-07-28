@@ -64,10 +64,16 @@ subtitulo2= Label(frame_entrada, text="Dado el valor de venta de un producto,\n 
 subtitulo2.config(bg="ivory2", fg="maroon", font=("Times New Roman", 15), anchor=CENTER)
 subtitulo2.place(x=240,y=70)
 
-logo= PhotoImage(file="goku.png")
+logo= PhotoImage(file="iva.png")
 etiq_logo=Label(frame_entrada, image=logo)
 etiq_logo.config(bg="ivory2")
 etiq_logo.place(x=10,y=10)
+
+logo1= PhotoImage(file="iva1.png")
+etiq_logo1=Label(frame_entrada, image=logo1)
+etiq_logo1.config(bg="ivory2")
+etiq_logo1.place(x=590,y=10)
+
 
 etiq_a=Label(frame_entrada, text="Precio del Producto = ")
 etiq_a.config(bg="ivory2", fg="blue", font=("Arial", 15), anchor=CENTER)
