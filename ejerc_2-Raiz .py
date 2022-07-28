@@ -16,7 +16,7 @@ def borrar():
     t_resultado.delete("Raiz", "end")
 
 def salir():
-    messagebox.showinfo("Raiz", "La App se cerrará...")
+    messagebox.showinfo("1.0", "La App se cerrará...")
     ventana_principal.destroy()
 
 

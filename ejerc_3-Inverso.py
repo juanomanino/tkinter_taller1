@@ -23,7 +23,7 @@ def sumar ():
 def borrar():
     messagebox.showinfo("Inverso", "Los datos serán borrados...")
     x.set("")
-    t_resultado.delete("Inverso", "end")
+    t_resultado.delete("1.0", "end")
 
 def salir():
     messagebox.showinfo("Inverso", "La App se cerrará...")

@@ -12,7 +12,7 @@ def sumar ():
 def borrar():
     messagebox.showinfo("N Enteros", "Lyos datos serán borrados...")
     x.set("")
-    t_resultado.delete("N Enteros", "end")
+    t_resultado.delete("1.0", "end")
 
 def salir():
     messagebox.showinfo("N Enteros", "La App se cerrará...")

@@ -13,7 +13,7 @@ def sumar ():
 def borrar():
     messagebox.showinfo("Iva", "Los datos serán borrados...")
     x.set("")
-    t_resultado.delete("Iva", "end")
+    t_resultado.delete("1.0", "end")
 
 def salir():
     messagebox.showinfo("Iva", "La App se cerrará...")
@@ -59,9 +59,10 @@ frame_entrada.place(x=10,y=10)
 titulo= Label(frame_entrada, text="Iva y Precio Final")
 titulo.config(bg="cadetblue3", fg="maroon", font=("Times New Roman", 20))
 titulo.place(x=240,y=10)
+
 titulo= Label(frame_entrada, text="Juan Niño")
 titulo.config(bg="cadetblue3", fg="maroon", font=("Times New Roman", 18))
-titulo.place(x=700,y=200)
+titulo.place(x=670,y=200)
 
 subtitulo2= Label(frame_entrada, text="Dado el valor de venta de un producto,\n Calcular su IVA y el precio final de venta")
 subtitulo2.config(bg="cadetblue3", fg="maroon", font=("Times New Roman", 15), anchor=CENTER)

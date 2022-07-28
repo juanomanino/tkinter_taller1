@@ -14,7 +14,7 @@ def sumar ():
 def borrar():
     messagebox.showinfo("Circulo", "Los datos serán borrados...")
     rad.set("")
-    t_resultado.delete("Circulo", "end")
+    t_resultado.delete("1.0", "end")
 
 def salir():
     messagebox.showinfo("Círculo", "La App se cerrará...")
