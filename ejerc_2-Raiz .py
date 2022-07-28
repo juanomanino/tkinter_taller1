@@ -10,13 +10,13 @@ def sumar ():
     t_resultado.insert(INSERT, "Resultados:\n La raiz del número "+n.get()+" es "+str(z)+"\n")
 
 def borrar():
-    messagebox.showinfo("Suma 1.0", "Los datos serán borrados...")
+    messagebox.showinfo("Raiz", "Los datos serán borrados...")
     x.set("")
     n.set("")
-    t_resultado.delete("1.0", "end")
+    t_resultado.delete("Raiz", "end")
 
 def salir():
-    messagebox.showinfo("Suma 1.0", "La App se cerrará...")
+    messagebox.showinfo("Raiz", "La App se cerrará...")
     ventana_principal.destroy()
 
 
@@ -53,29 +53,33 @@ z=IntVar()
 #---------------------
 
 frame_entrada=Frame(ventana_principal)
-frame_entrada.config(bg="ivory2", width=780, height=240)
+frame_entrada.config(bg="pink2", width=780, height=240)
 frame_entrada.place(x=10,y=10)
 
 titulo= Label(frame_entrada, text="Raiz X de un número N")
-titulo.config(bg="ivory2", fg="maroon", font=("Times New Roman", 20))
+titulo.config(bg="pink2", fg="maroon", font=("Times New Roman", 20))
 titulo.place(x=240,y=10)
 
+titulo= Label(frame_entrada, text="Juan Niño")
+titulo.config(bg="cadetblue3", fg="maroon", font=("Times New Roman", 18))
+titulo.place(x=670,y=200)
+
 subtitulo2= Label(frame_entrada, text="Hallar la raíz X de un Número enésimo,\n")
-subtitulo2.config(bg="ivory2", fg="maroon", font=("Times New Roman", 15), anchor=CENTER)
+subtitulo2.config(bg="pink2", fg="maroon", font=("Times New Roman", 15), anchor=CENTER)
 subtitulo2.place(x=240,y=70)
 
-logo= PhotoImage(file="goku.png")
+logo= PhotoImage(file="bl.png")
 etiq_logo=Label(frame_entrada, image=logo)
-etiq_logo.config(bg="ivory2")
+etiq_logo.config(bg="pink2")
 etiq_logo.place(x=10,y=10)
 
 logo1= PhotoImage(file="f.png")
 etiq_logo1=Label(frame_entrada, image=logo1)
-etiq_logo1.config(bg="ivory2")
+etiq_logo1.config(bg="pink2")
 etiq_logo1.place(x=600,y=50)
 
 etiq_a=Label(frame_entrada, text="Valor del índice (x): = ")
-etiq_a.config(bg="ivory2", fg="blue", font=("Arial", 15), anchor=CENTER)
+etiq_a.config(bg="pink2", fg="grey10", font=("Arial", 15), anchor=CENTER)
 etiq_a.place(x=280, y=110)
 
 entry_a=Entry(frame_entrada, width=7, textvariable=x)
@@ -84,7 +88,7 @@ entry_a.focus_set()
 entry_a.place(x=480,y=105)
 
 etiq_b=Label(frame_entrada, text="Valor del número N = ")
-etiq_b.config(bg="ivory2", fg="blue", font=("Arial", 15), anchor=CENTER)
+etiq_b.config(bg="pink2", fg="grey10", font=("Arial", 15), anchor=CENTER)
 etiq_b.place(x=280, y=160)
 
 entry_b=Entry(frame_entrada, width=7, textvariable=n)
@@ -98,22 +102,22 @@ entry_b.place(x=480,y=155)
 #---------------------
 
 frame_operaciones=Frame(ventana_principal)
-frame_operaciones.config(bg="cornflower blue", width=780, height=120)
+frame_operaciones.config(bg="cornflower blue", width=780, height=135)
 frame_operaciones.place(x=10,y=260)
 
 
-bt_sum= PhotoImage(file="sumar.png")
-bt_sumar= Button(frame_operaciones, image=bt_sum, width=105, height=105, command=sumar)
-bt_sumar.place(x=116, y=7)
+bt_sum= PhotoImage(file="ra.png")
+bt_sumar= Button(frame_operaciones, image=bt_sum, width=130, height=125, command=sumar)
+bt_sumar.place(x=100, y=5)
 
 
 bt_bor= PhotoImage(file="borrar.png")
-bt_borrar= Button(frame_operaciones, image=bt_bor, width=105, height=105, command=borrar)
-bt_borrar.place(x=337, y=7)
+bt_borrar= Button(frame_operaciones, image=bt_bor, width=125, height=120, command=borrar)
+bt_borrar.place(x=330, y=7)
 
 
-bt_sal= PhotoImage(file="cerrar.png")
-bt_salir= Button(frame_operaciones, image=bt_sal, width=105, height=105, command=salir)
+bt_sal= PhotoImage(file="salida.png")
+bt_salir= Button(frame_operaciones, image=bt_sal, width=125, height=120, command=salir)
 bt_salir.place(x=585, y=7)
 
 
@@ -123,10 +127,10 @@ bt_salir.place(x=585, y=7)
 
 frame_resultados=Frame(ventana_principal)
 frame_resultados.config(bg="indian red", width=780, height=100)
-frame_resultados.place(x=10,y=390)
+frame_resultados.place(x=10,y=400)
 
 t_resultado=Text(frame_resultados, width=77, height=5)
-t_resultado.config(bg="green", fg="white", font=("Courier", 12))
+t_resultado.config(bg="aquamarine", fg="black", font=("Courier", 12))
 t_resultado.pack(expand=True)
 
 
